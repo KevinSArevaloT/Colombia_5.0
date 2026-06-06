@@ -1,0 +1,446 @@
+/* ---- 1. Estilo basico ---- */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  color: #222222;
+}
+
+h1, h2, h3 {
+  color: #111111;
+}
+
+a {
+  text-decoration: none;
+  color: #5b21b6;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Contenedor centrado */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Texto de acento (color morado) */
+.accent {
+  color: #7c3aed;
+}
+
+
+/* ---- 2. Barra de navegacion ---- */
+
+.navbar {
+  background-color: #1a1a2e;
+  padding: 15px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-logo {
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.nav-logo span {
+  color: #7c3aed;
+}
+
+/* Lista de enlaces del menú */
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  color: #cccccc;
+  font-size: 15px;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: white;
+  text-decoration: none;
+}
+
+/* Botón del menú (solo se ve en móvil) */
+.nav-toggle {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  display: none;
+}
+
+
+/* ---- 3. La parte principal arriba ---- */
+
+.hero {
+  background-color: #1a1a2e;
+  color: white;
+  padding: 80px 30px;
+  text-align: center;
+}
+
+.hero-tag {
+  font-size: 13px;
+  color: #9ca3af;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.hero h1 {
+  font-size: 60px;
+  margin: 10px 0;
+  color: white;
+}
+
+.hero-sub {
+  font-size: 20px;
+  color: #d1d5db;
+  margin: 5px 0 15px;
+}
+
+.hero-desc {
+  font-size: 16px;
+  color: #9ca3af;
+  max-width: 580px;
+  margin: 0 auto 30px;
+  line-height: 1.7;
+}
+
+/* Contenedor de los dos botones */
+.hero-btns {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+/* Botón principal */
+.btn-primary {
+  background-color: #7c3aed;
+  color: white;
+  padding: 12px 28px;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+.btn-primary:hover {
+  background-color: #6d28d9;
+  text-decoration: none;
+}
+
+/* Botón secundario  */
+.btn-outline {
+  border: 2px solid #7c3aed;
+  color: #a78bfa;
+  padding: 12px 28px;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+.btn-outline:hover {
+  background-color: #7c3aed;
+  color: white;
+  text-decoration: none;
+}
+
+/* boton de ingles */
+
+.language-switch {
+    margin-left: 20px;
+}
+
+.language-switch button {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+    padding: 8px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.language-switch button:hover {
+    background: white;
+    color: black;
+}
+.en {
+    display: none;
+}
+/* insignea "2026 Edición" */
+.hero-badge {
+  margin-top: 40px;
+}
+
+.badge-circle {
+  display: inline-block;
+  border: 2px solid #7c3aed;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  line-height: 1.2;
+  padding-top: 18px;
+  text-align: center;
+}
+
+.badge-circle span {
+  display: block;
+  font-size: 20px;
+  font-weight: bold;
+  color: #a78bfa;
+}
+
+.badge-circle small {
+  font-size: 11px;
+  color: #9ca3af;
+}
+
+
+/* ---- 4. seccion de informacion ---- */
+
+.about {
+  padding: 60px 0;
+  background-color: #ffffff;
+}
+
+.about-grid {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.about-text {
+  flex: 1;
+  min-width: 280px;
+}
+
+.about-text h2 {
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+.about-text p {
+  color: #555555;
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+
+/* Tarjetas de información */
+.about-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  flex: 1;
+  min-width: 280px;
+}
+
+.info-card {
+  background-color: #f9f9f9;
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+  padding: 20px;
+  width: calc(50% - 8px);
+  box-sizing: border-box;
+}
+
+.card-icon {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.info-card h3 {
+  font-size: 15px;
+  margin: 0 0 6px;
+}
+
+.info-card p {
+  font-size: 13px;
+  color: #666666;
+  margin: 0;
+  line-height: 1.5;
+}
+
+
+/* ---- 5. seccion de conferencias asistidas ---- */
+
+.preview {
+  background-color: #f0ecff;
+  padding: 60px 0;
+}
+
+.preview h2 {
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.section-sub {
+  text-align: center;
+  color: #666666;
+  margin-bottom: 35px;
+}
+
+/* tarjetas de conferencias */
+.preview-grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.preview-card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 25px;
+  flex: 1;
+  min-width: 260px;
+  cursor: pointer;
+  border: 1px solid #e0d5ff;
+}
+
+.preview-card:hover {
+  border-color: #7c3aed;
+}
+
+.preview-tag {
+  background-color: #ede9fe;
+  color: #6d28d9;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+.preview-tag--security {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.preview-card h3 {
+  font-size: 16px;
+  margin: 0 0 8px;
+}
+
+.preview-card p {
+  font-size: 13px;
+  color: #777777;
+  margin: 0 0 15px;
+}
+
+.preview-link {
+  color: #7c3aed;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+
+/* ---- 6. pie de pagina ---- */
+
+.footer {
+  background-color: #1a1a2e;
+  color: #aaaaaa;
+  padding: 35px 20px;
+  text-align: center;
+}
+
+.footer-logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 5px;
+}
+
+.footer-logo span {
+  color: #7c3aed;
+}
+
+.footer p {
+  margin: 4px 0;
+  font-size: 13px;
+}
+
+.footer-nav {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-nav a {
+  color: #aaaaaa;
+  font-size: 13px;
+}
+
+.footer-nav a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+
+/* ---- 7. Diseño movil ---- */
+/* Se aplican cuando la pantalla es menor a 700px */
+
+@media (max-width: 700px) {
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .navbar {
+    flex-wrap: wrap;
+  }
+
+  .hero h1 {
+    font-size: 38px;
+  }
+
+  .info-card {
+    width: 100%;
+  }
+
+  .hero-btns {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* imagen */
+
+.photo-slot {
+  aspect-ratio: 4/3;  
+  overflow: hidden;    
+}
+
+.photo-slot img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   
+}

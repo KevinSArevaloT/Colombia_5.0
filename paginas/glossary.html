@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Glossary – Colombia 5.0</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- botones de navegacion -->
+  <nav class="navbar">
+    <div class="nav-logo"><a href="../index.html" style="color:inherit;text-decoration:none;">Colombia <span>5.0</span></a></div>
+    <button class="nav-toggle" id="navToggle">☰</button>
+    <ul class="nav-links" id="navLinks">
+      <li>
+        <a href="../index.html" class="es">Inicio</a>
+        <a href="../index.html" class="en">Home</a>
+      </li>
+      <li>
+        <a href="conferences.html" class="es">Conferencias</a>
+        <a href="conferences.html" class="en">Conferences</a>
+      </li>
+      <li>
+        <a href="glossary.html" class="active">Glossary</a>
+      </li>
+      <li>
+        <a href="conclusion.html" class="es">Conclusión</a>
+        <a href="conclusion.html" class="en">Conclusion</a>
+      </li>
+    </ul>
+    <!-- boton de traduccion -->
+    <div class="language-switch">
+      <button id="langBtn">English</button>
+    </div>
+  </nav>
+
+  <!-- encabezado -->
+  <div class="page-hero">
+    <div class="container">
+      <h1>Technical <span class="accent">Glossary</span></h1>
+      <p class="es">Términos técnicos aprendidos durante el evento Colombia 5.0 · 8 de mayo de 2026</p>
+      <p class="en">Technical terms learned during the Colombia 5.0 event · May 8, 2026</p>
+    </div>
+  </div>
+
+  <!-- contenido del glosario -->
+  <section style="padding: 60px 0;">
+    <div class="container">
+
+      <p class="glossary-count" id="glossaryCount"></p>
+
+      <!-- buscador -->
+      <div class="glossary-search">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="🔍  Busca un término en inglés o español..."
+        />
+      </div>
+
+      <!-- Tabla -->
+      <div style="overflow-x:auto;">
+        <table class="glossary-table" id="glossaryTable">
+          <thead>
+            <tr>
+              <th>English</th>
+              <th>Español</th>
+              <th class="es">Definición</th>
+              <th class="en">Definition</th>
+            </tr>
+          </thead>
+          <tbody id="glossaryBody">
+
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- pie de pagina -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>
+      <p class="footer-logo">Colombia <span>5.0</span></p>
+      <p class="es">Actividad académica – SENA</p>
+      <p class="en">Academic activity – SENA</p>
+      <p class="es">Centro de Manufactura en Textil y Cuero · ficha: 3288046</p>
+      <p class="en">Textile and Leather Manufacturing Center · cohort: 3288046</p>
+      <p>kevin santiago arevalo trujillo</p>
+      </div>
+      <nav class="footer-nav">
+        <a href="../index.html" class="es">Inicio</a>
+        <a href="../index.html" class="en">Home</a>
+        <a href="conferences.html" class="es">Conferencias</a>
+        <a href="conferences.html" class="en">Conferences</a>
+        <a href="glossary.html" class="es">Glosario</a>
+        <a href="glossary.html" class="en">Glossary</a>
+        <a href="conclusion.html" class="es">Conclusión</a>
+        <a href="conclusion.html" class="en">Conclusion</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+<script>
+    const terms = [
+      {
+        en: "Artificial Intelligence", es: "Inteligencia Artificial",
+        def:   "Tecnología que permite a las máquinas aprender y tomar decisiones similares a las humanas.",
+        defEn: "Technology that enables machines to learn and make decisions similar to those of humans."
+      },
+      {
+        en: "Machine Learning", es: "Aprendizaje Automático",
+        def:   "Rama de la IA donde los sistemas aprenden patrones de datos sin ser programados explícitamente.",
+        defEn: "Branch of AI where systems learn patterns from data without being explicitly programmed."
+      },
+      {
+        en: "Cloud Computing", es: "Computación en la Nube",
+        def:   "Servicios y recursos computacionales ofrecidos a través de internet bajo demanda.",
+        defEn: "Computational services and resources delivered over the internet on demand."
+      },
+      {
+        en: "Cybersecurity", es: "Ciberseguridad",
+        def:   "Conjunto de prácticas y tecnologías para proteger sistemas, redes y datos de ataques digitales.",
+        defEn: "Set of practices and technologies designed to protect systems, networks, and data from digital attacks."
+      },
+      {
+        en: "User Experience (UX)", es: "Experiencia de Usuario",
+        def:   "Percepción global del usuario al interactuar con un sistema o producto digital.",
+        defEn: "Overall perception a user has when interacting with a digital system or product."
+      },
+      {
+        en: "User Interface (UI)", es: "Interfaz de Usuario",
+        def:   "Elementos visuales e interactivos que permiten al usuario comunicarse con un sistema.",
+        defEn: "Visual and interactive elements that allow a user to communicate with a system."
+      },
+      {
+        en: "Encryption", es: "Cifrado",
+        def:   "Proceso de convertir información en un formato ilegible para protegerla de accesos no autorizados.",
+        defEn: "Process of converting information into an unreadable format to protect it from unauthorized access."
+      },
+      {
+        en: "Phishing", es: "Suplantación de identidad",
+        def:   "Técnica de engaño en la que el atacante se hace pasar por una entidad confiable para robar datos.",
+        defEn: "Deception technique in which an attacker impersonates a trusted entity to steal sensitive data."
+      },
+      {
+        en: "Firewall", es: "Cortafuegos",
+        def:   "Sistema de seguridad que controla el tráfico de red entrante y saliente según reglas establecidas.",
+        defEn: "Security system that monitors and controls incoming and outgoing network traffic based on defined rules."
+      },
+      {
+        en: "API", es: "Interfaz de Programación de Aplicaciones",
+        def:   "Conjunto de definiciones que permite a dos sistemas comunicarse e intercambiar datos entre sí.",
+        defEn: "Set of definitions that allows two systems to communicate and exchange data with each other."
+      },
+      {
+        en: "Responsive Design", es: "Diseño Responsivo",
+        def:   "Técnica de diseño web que adapta la presentación del sitio a distintos tamaños de pantalla.",
+        defEn: "Web design technique that adapts a site's layout to different screen sizes and devices."
+      },
+      {
+        en: "Automation", es: "Automatización",
+        def:   "Uso de tecnología para realizar tareas repetitivas con mínima intervención humana.",
+        defEn: "Use of technology to perform repetitive tasks with minimal human intervention."
+      },
+      {
+        en: "Data Privacy", es: "Privacidad de Datos",
+        def:   "Derecho y práctica de proteger la información personal de accesos o usos no autorizados.",
+        defEn: "Right and practice of protecting personal information from unauthorized access or use."
+      },
+      {
+        en: "Blockchain", es: "Cadena de Bloques",
+        def:   "Tecnología de registro distribuido que almacena datos de forma segura, transparente e inmutable.",
+        defEn: "Distributed ledger technology that stores data in a secure, transparent, and immutable way."
+      },
+      {
+        en: "Big Data", es: "Grandes Datos",
+        def:   "Conjuntos de datos tan grandes o complejos que requieren herramientas especiales para procesarlos.",
+        defEn: "Datasets so large or complex that they require specialized tools and methods to process."
+      },
+      {
+        en: "DevOps", es: "Desarrollo y Operaciones",
+        def:   "Metodología que integra el desarrollo de software y las operaciones de TI para entregar productos más rápido.",
+        defEn: "Methodology that integrates software development and IT operations to deliver products faster and more reliably."
+      },
+      {
+        en: "Agile", es: "Ágil",
+        def:   "Metodología de desarrollo de software basada en entregas iterativas e incrementales y trabajo en equipo.",
+        defEn: "Software development methodology based on iterative and incremental deliveries and close teamwork."
+      },
+      {
+        en: "HUD (Heads-Up Display)", es: "Pantalla de información superpuesta",
+        def:   "En videojuegos, elementos de interfaz permanentes que muestran información clave al jugador.",
+        defEn: "In video games, persistent interface elements that display key information to the player without interrupting gameplay."
+      },
+      {
+        en: "Visual Hierarchy", es: "Jerarquía Visual",
+        def:   "Organización de elementos visuales en orden de importancia para guiar la atención del usuario.",
+        defEn: "Arrangement of visual elements in order of importance to guide the user's attention effectively."
+      },
+      {
+        en: "Two-Factor Authentication", es: "Autenticación de dos factores",
+        def:   "Método de seguridad que requiere dos formas de verificación antes de dar acceso a un sistema.",
+        defEn: "Security method that requires two separate forms of verification before granting access to a system."
+      },
+      {
+        en: "Social Engineering", es: "Ingeniería Social",
+        def:   "Técnica de manipulación psicológica para engañar a personas y obtener información confidencial.",
+        defEn: "Psychological manipulation technique used to deceive people into revealing confidential information."
+      },
+      {
+        en: "Open Source", es: "Código Abierto",
+        def:   "Software cuyo código fuente es de acceso público y puede ser modificado y distribuido libremente.",
+        defEn: "Software whose source code is publicly available and can be freely modified and distributed."
+      },
+      {
+        en: "Frontend", es: "Lado del cliente",
+        def:   "Parte de un sistema web o aplicación con la que el usuario interactúa directamente.",
+        defEn: "Part of a web system or application that the user interacts with directly."
+      },
+      {
+        en: "Backend", es: "Lado del servidor",
+        def:   "Parte de una aplicación que gestiona la lógica, base de datos y funciones no visibles al usuario.",
+        defEn: "Part of an application that handles logic, databases, and functions not directly visible to the user."
+      },
+      {
+        en: "Repository", es: "Repositorio",
+        def:   "Almacenamiento centralizado donde se guarda y gestiona el código fuente de un proyecto.",
+        defEn: "Centralized storage where a project's source code is saved and managed."
+      },
+      {
+        en: "Deployment", es: "Despliegue",
+        def:   "Proceso de publicar y poner en funcionamiento una aplicación en un entorno de producción.",
+        defEn: "Process of publishing and putting an application into operation in a production environment."
+      },
+      {
+        en: "Vulnerability", es: "Vulnerabilidad",
+        def:   "Fallo o debilidad en un sistema que puede ser explotado por un atacante para causar daño.",
+        defEn: "Flaw or weakness in a system that can be exploited by an attacker to cause damage."
+      },
+      {
+        en: "Prototype", es: "Prototipo",
+        def:   "Versión preliminar de un producto usada para probar ideas y conceptos antes del desarrollo final.",
+        defEn: "Preliminary version of a product used to test ideas and concepts before final development."
+      },
+      {
+        en: "Interaction Design", es: "Diseño de Interacción",
+        def:   "Disciplina enfocada en crear experiencias significativas entre usuarios y productos digitales.",
+        defEn: "Discipline focused on creating meaningful experiences between users and digital products."
+      },
+      {
+        en: "Usability", es: "Usabilidad",
+        def:   "Medida de qué tan fácil y eficiente es usar un producto o sistema para alcanzar un objetivo.",
+        defEn: "Measure of how easy and efficient it is to use a product or system to achieve a goal."
+      },
+      {
+        en: "Internet of Things (IoT)", es: "Internet de las Cosas",
+        def:   "Red de dispositivos físicos conectados a internet que recopilan y comparten datos.",
+        defEn: "Network of physical devices connected to the internet that collect and share data."
+      },
+      {
+        en: "Data Breach", es: "Filtración de Datos",
+        def:   "Incidente de seguridad donde información confidencial es accedida o divulgada sin autorización.",
+        defEn: "Security incident where confidential information is accessed or disclosed without authorization."
+      },
+      {
+        en: "Malware", es: "Software Malicioso",
+        def:   "Cualquier software diseñado para dañar, infiltrarse o robar información de un sistema.",
+        defEn: "Any software intentionally designed to damage, infiltrate, or steal information from a system."
+      },
+      {
+        en: "Negative Space", es: "Espacio Negativo",
+        def:   "Área vacía alrededor de los elementos de diseño que mejora la legibilidad y el enfoque visual.",
+        defEn: "Empty area surrounding design elements that improves readability and visual focus."
+      },
+      {
+        en: "Feedback Loop", es: "Ciclo de retroalimentación",
+        def:   "Proceso en el que la salida de un sistema es usada como entrada para mejorar su funcionamiento.",
+        defEn: "Process in which the output of a system is used as input to improve its overall functioning."
+      }
+    ];
+
+    /* Actualiza el texto del contador según el idioma activo */
+    function updateCount(total) {
+      const lang = localStorage.getItem("language") || "es";
+      const countEl = document.getElementById("glossaryCount");
+      if (lang === "en") {
+        countEl.textContent = `Showing ${total} technical term${total !== 1 ? "s" : ""}`;
+      } else {
+        countEl.textContent = `Mostrando ${total} término${total !== 1 ? "s" : ""} técnico${total !== 1 ? "s" : ""}`;
+      }
+    }
+
+    /* Actualiza la barra de busqueda */
+    function updatePlaceholder() {
+      const lang = localStorage.getItem("language") || "es";
+      const input = document.getElementById("searchInput");
+      input.placeholder = lang === "en"
+        ? "🔍  Search a term in English or Spanish..."
+        : "🔍  Busca un término en inglés o español...";
+    }
+
+    function render(data) {
+      const lang = localStorage.getItem("language") || "es";
+      const tbody = document.getElementById("glossaryBody");
+      tbody.innerHTML = data.map(t => `
+        <tr>
+          <td>${t.en}</td>
+          <td>${t.es}</td>
+          <td>${lang === "en" ? t.defEn : t.def}</td>
+        </tr>
+      `).join("");
+      updateCount(data.length);
+    }
+
+    render(terms);
+    updatePlaceholder();
+
+    /* Filtro de búsqueda */
+    document.getElementById("searchInput").addEventListener("input", function () {
+      const q = this.value.toLowerCase();
+      const filtered = terms.filter(t =>
+        t.en.toLowerCase().includes(q) ||
+        t.es.toLowerCase().includes(q) ||
+        t.def.toLowerCase().includes(q) ||
+        t.defEn.toLowerCase().includes(q)
+      );
+      render(filtered);
+    });
+
+    /* Al cambiar idioma: re-renderiza la tabla */
+    document.getElementById("langBtn")?.addEventListener("click", function () {
+      setTimeout(() => {
+        const q = document.getElementById("searchInput").value.toLowerCase();
+        const filtered = q
+          ? terms.filter(t =>
+              t.en.toLowerCase().includes(q) ||
+              t.es.toLowerCase().includes(q) ||
+              t.def.toLowerCase().includes(q) ||
+              t.defEn.toLowerCase().includes(q)
+            )
+          : terms;
+        render(filtered);
+        updatePlaceholder();
+      }, 0);
+    });
+  </script>
+</body>
+</html>
